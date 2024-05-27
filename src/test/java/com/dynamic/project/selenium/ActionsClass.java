@@ -14,7 +14,7 @@ public class ActionsClass {
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.google.co.in/");
-        WebElement elem = driver.findElement(By.xpath("//input[@name='q']"));
+        WebElement elem = driver.findElement(By.xpath("//textarea[@name='q']"));
 
 		Actions actions = new Actions(driver);
         Thread.sleep(500);
@@ -72,7 +72,7 @@ public class ActionsClass {
         actions.moveToElement(elem).click() .keyDown(" ").keyUp(" ").build().perform();
         Thread.sleep(500);
 
-        actions.moveToElement(elem).click() .keyDown("U").keyUp("U").build().perform();
+        actions.moveToElement(elem).click() .keyDown(" U").keyUp(" U").build().perform();
       
 //        actions.moveToElement(elem).click() .keyDown("!").keyUp("!").build().perform();
 
